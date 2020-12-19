@@ -44,7 +44,7 @@ $resultadof = mysqli_query($conn, $sqlf);
             echo "<td>".$filaf[7]."</td>";
         ?>
             <td>
-                <a href="bentrada.php?codUsuario=<?php echo urlencode($filaf[0])?>">Ver seguimiento</a>
+                <a href="bentrada.php?codUsuario=<?php echo urlencode($filaf[0])?>" class="botonmat">Ver seguimiento</a>
             </td>
         </tr>
         <?php

@@ -10,8 +10,8 @@
 </head>
 <body>
     <div class="sidenav">
-        <h1 class="titulo">SIA</h1>
-        <img src="./img/birrete.png" alt="" width="60">
+        <h1 class="titulo">STA</h1>
+        <img src="./img/logo.png" alt="" width="60">
         <?php
             if($_SESSION['codRol']=='P'){
         ?>
@@ -32,7 +32,8 @@
         ?>
         <div id="menu">
             <ul>
-                <li><a href="listar_postulantes.php"><span class="material-icons">groups</span>   Postulantes</a></li>
+                <li><a href="listar_postulantes.php"><span class="material-icons">groups</span>   Seguimiento de Postulantes</a></li>
+                <li><a href="flujo.php?cf=F1&cp=P1"><span class="material-icons">arrow_right_alt</span>   Flujo</a></li>
             </ul> 
         </div>
         <?php

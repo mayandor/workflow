@@ -4,7 +4,7 @@ table {
   margin-top: 8%;
   /* margin-right: 20%; */
   margin-left: 4%;
-  background-color: #271d64;
+  background-color: #797171;
   border-collapse: collapse;
 }
 thead, tr{
@@ -27,7 +27,7 @@ tr:hover{
     display: inline-block;
     background: #5e0f04;
     color: #fff;
-    padding: 10px 20px;
+    padding: 5px 10px;
   }
   .botonmatDisable{
     font-size: 20px;
