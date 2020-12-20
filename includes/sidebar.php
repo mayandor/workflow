@@ -16,15 +16,9 @@
             if($_SESSION['codRol']=='P'){
         ?>
         <div id="menu">
-        <ul>
-            <li class="parent">
-                <a href="#"><span class="material-icons">school</span>  Curso de Verano</a>
-                <ul>
-                    <li><a href="inscripcion.php">Inscripcion</a></li>
-                    <li><a href="materias_inscritas.php">Materias inscritas</a></li>
-                </ul>
-            </li> 
-        </ul>
+            <ul>
+                <li><a href="bentrada.php?codUsuario=<?php echo $_SESSION['codUsuario'];?>"><span class="material-icons">mail_outline</span>  Bandeja de Entrada</a></li>
+            </ul>
         </div>
         <?php
         }
