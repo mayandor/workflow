@@ -28,7 +28,7 @@
             <ul>
                 <li><a href="listar_postulantes.php"><span class="material-icons">groups</span> Seguimiento de Postulantes Auxiliares</a></li>
                 <li><a href="flujo.php?cf=F1&cp=P1"><span class="material-icons">arrow_right_alt</span>   Flujo Auxiliares</a></li>
-                <li><a href="#"><span class="material-icons">groups</span> Seguimiento de Postulantes Becarios</a></li>
+                <li><a href="listarPostulantesBecarios.php"><span class="material-icons">groups</span> Seguimiento de Postulantes Becarios</a></li>
                 <li><a href="flujo.php?cf=F2&cp=P1"><span class="material-icons">arrow_right_alt</span>   Flujo Becarios</a></li>
             </ul> 
         </div>
