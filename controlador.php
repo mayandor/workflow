@@ -12,9 +12,6 @@ $sql1 ="select * from flujocuestionante ";
 $sql1.="where codFlujo='$codflujo' ";
 $sql1.="and codProcesoSI='$codproceso'";
 $resultado1 = mysqli_query($conn, $sql1);
-if($cp='P11'){
-    header("Location: fin.inc.php");
-}else{
 if($fila1 = mysqli_fetch_row($resultado1)){
     if (isset($_GET["Siguiente"]))
     {
@@ -74,10 +71,14 @@ if($fila1 = mysqli_fetch_row($resultado1)){
         $cp=$fila[3];
         echo "NO";
         echo $cp;
-        header("Location: notificacion.inc.php?notificacion='fin'");
+        if($cf=='F1'){
+            header("Location: notificacion.inc.php");
+        }else{
+            
+        }
     }
 }
 }
-}
+
 // echo "controlar un select del formulario";
 
