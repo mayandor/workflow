@@ -13,8 +13,21 @@ $sql1.="where codFlujo='$codflujo' ";
 $sql1.="and codProcesoSI='$codproceso'";
 $resultado1 = mysqli_query($conn, $sql1);
 if($fila1 = mysqli_fetch_row($resultado1)){
-    $cf= $fila1[0];
-    $cp= $fila1[1];
+    if (isset($_GET["Siguiente"]))
+    {
+        $sql ="select * from proceso ";
+        $sql.="where codFlujo='$codflujo' ";
+        $sql.="and codProceso='$codproceso'";
+        $resultado = mysqli_query($conn, $sql);
+        $fila = mysqli_fetch_row($resultado);
+        $cf=$fila[0];
+        $cp=$fila[2];
+    }
+    if (isset($_GET["Anterior"]))
+    {
+        $cf= $fila1[0];
+        $cp= $fila1[1];
+    }
     header("Location: flujo.php?cf=$cf&cp=$cp");
 }else{
     if ($tipo!="C")

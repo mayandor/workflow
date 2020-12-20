@@ -1,37 +1,34 @@
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/consulta.css"></link>
-    <title>Inscripcion</title>
+    <title>Revision Papeles</title>
 </head>
 <?php
-    session_start();
+    // session_start();
     include('conexion.inc.php');
     // si la session no existe entondes redirecciona añ index caso contrario deja pasar y se carga la pagina
     if (!isset($_SESSION['username'])){
-        header("location: index.php");
+		header("location: index.php");
     }
-?>
+	?>
     <div>
-        <?php include('includes/header.php')?>
-        <?php include('includes/sidebar.php')?>
+		<h4>Examen escrito</h4>
         <!-- Aqui va el contenido -->
-        <div class="main">
 <?php 
-$sqlf ="select * from postulacion.usuario u, postulacion.materia m, postulacion.postulante p where p.idMat= m.idMat and p.codUsuario= u.codUsuario";
+$sqlf ="select * from postulacion.usuario u, postulacion.materia m, postulacion.postulante p where p.idMat= m.idMat and p.codUsuario= u.codUsuario and p.notaEscrito >=51";
 $resultadof = mysqli_query($conn, $sqlf);
 ?>
 
     <!-- <div class="main"> -->
         <!-- Aqui va el contenido -->
-        <h1>Postulantes a Auxiliatura</h1>
         <table>
             <thead>
                 <td>NOMBRE</td>
                 <td>APELLIDO</td>
                 <td>RU</td>
-                <td>MATERIA POSTULANTE</td>
-                <td>Operaciones</td>
+				<td>MATERIA POSTULANTE</td>
+				<td>NOTA</td>
             </thead>
         <?php
         while($filaf = mysqli_fetch_row($resultadof))
@@ -40,17 +37,18 @@ $resultadof = mysqli_query($conn, $sqlf);
             echo "<td>".$filaf[3]."</td>";
             echo "<td>".$filaf[4]."</td>";
             echo "<td>".$filaf[11]."</td>";
-            echo "<td>".$filaf[7]."</td>";
+			echo "<td>".$filaf[7]."</td>";
+			echo "<td>".$filaf[12]."</td>";
         ?>
-            <td>
-                <a href="bentrada.php?codUsuario=<?php echo urlencode($filaf[0])?>" class="botonmat">Ver seguimiento</a>
-            </td>
         </tr>
         <?php
         };
         ?>
         </tr>
         </table>
-        </div>
-        <!-- </div> -->
+		<select name="sino">
+			<option>Si</option>
+			<option>No</option>
+		</select>
     </div>
+

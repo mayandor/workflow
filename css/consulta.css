@@ -1,9 +1,9 @@
 table {
     color: #ddd;
   width: 90%;
-  margin-top: 8%;
+  margin-top: 5%;
   /* margin-right: 20%; */
-  margin-left: 4%;
+  margin-left: 3%;
   background-color: #797171;
   border-collapse: collapse;
 }
@@ -29,25 +29,4 @@ tr:hover{
     color: #fff;
     padding: 5px 10px;
   }
-  .botonmatDisable{
-    font-size: 20px;
-    text-decoration: none;
-    margin: 10px 20px;
-    display: inline-block;
-    background: #5e0f04;
-    color: #fff;
-    padding: 10px 20px;
-    pointer-events: none;
-    cursor: default;
-  }
-  .disable {
-    font-size: 20px;
-    text-decoration: none;
-    margin: 10px 20px;
-    display: inline-block;
-    background: #979594;
-    color: #fff;
-    pointer-events: none;
-    cursor: default;
-    padding: 10px 20px;
-  }
+

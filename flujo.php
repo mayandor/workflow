@@ -25,7 +25,7 @@ include $fila[5];
 <input type="hidden" name="codflujo" value="<?php echo $fila[0];?>"/>
 <input type="hidden" name="codproceso" value="<?php echo $fila[1];?>"/>
 <input type="hidden" name="tipo" value="<?php echo $fila[3];?>"/>
-<input type="submit" name="Siguiente" value="Siguiente"/>
-<input type="submit" name="Anterior" value="Anterior"/>
+<input type="submit" name="Anterior" value="<<" class="botonSubmit"/>
+<input type="submit" name="Siguiente" value=">>" class="botonSubmit"/>
 </form>
 </div>

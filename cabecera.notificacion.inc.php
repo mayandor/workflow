@@ -1,1 +1,1 @@
-<h1>Cabecera lista notificacion</h1>
+<h1>Notificaciones a postulantes</h1>

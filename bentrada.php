@@ -1,23 +1,37 @@
 <html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/consulta.css"></link>
+    <title>Examen oral</title>
+</head>
 <body>
 <?php
 session_start();
+if (!isset($_SESSION['username'])){
+	header("location: index.php");
+}
+
 include "conexion.inc.php";
 $sql ="select * from seguimiento ";
 $sql.="where usuario='".$_GET["codUsuario"]."' ";
 $sql.="and fechafin is null";
-echo $sql;
 $resultado = mysqli_query($conn, $sql);
 ?>
-<table border="1px">
-	<tr>
-		<td>Tramite</td>
-		<td>Flujo</td>
-		<td>Proceso</td>
-		<td>Fecha Inicial</td>
-		<td>Operaciones</td>
-	</tr>
-<?php
+<div>
+        <?php include('includes/header.php')?>
+        <?php include('includes/sidebar.php')?>
+        <!-- Aqui va el contenido -->
+        <div class="main">
+			<table border="1px">
+				<tr>
+					<td>Tramite</td>
+					<td>Flujo</td>
+					<td>Proceso</td>
+					<td>Fecha Inicial</td>
+					<td>Operaciones</td>
+				</tr>
+				<?php
 while ($fila = mysqli_fetch_row($resultado))
 {
 	echo "<tr>";
@@ -30,5 +44,7 @@ while ($fila = mysqli_fetch_row($resultado))
 }
 ?>
 </table>
+</div>
+</div>
 </body>
 <html>

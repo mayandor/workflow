@@ -6,7 +6,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(121, 17, 17);
+    background-color: rgb(112, 12, 12);
     overflow-x: hidden;
     padding-top: 20px;
 }
@@ -30,18 +30,9 @@
     display:inline-block;
     width:150px;
     height:30px;
-    /* padding-top: 50px; */
-    /* padding:5px 10px; */
-    /* background-color:#000; */
-    /* border:1px solid #000; */
     color:#fff;
     position:relative;
 }
-/* 
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-} */
 .sidenav img{
     margin-right: 35%;
     margin-bottom: 20%;
@@ -106,22 +97,6 @@
     display:block;
   }
 
-.botonNew {
-    text-decoration: none;
-    padding: 10px;
-    font-weight: 600;
-    font-size: 20px;
-    color: #ffffff;
-    background-color: #0f7c1d;
-    border-radius: 6px;
-    /* border: 2px solid #0016b0; */
-    margin-left: 70%;
-  }
-  .botonNew:hover{
-    color: #f4fdf5;
-    background-color: #48f026;
-  }
-
   input[type=text], select {
     width: 95%;
     padding: 12px 20px;
@@ -132,18 +107,19 @@
     box-sizing: border-box;
   }
   
-  .formboton{
-    width: 95%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  .botonSubmit{
+    margin-top: 8%;
+    margin-left: 25%;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1d1fa3;
+    border-radius: 6px;
   }
-  
-  .formboton:hover {
-    background-color: #45a049;
+
+  .botonSubmit:hover{
+    color: #f4fdf5;
+    background-color: #4676ad;
   }
-  
