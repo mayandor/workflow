@@ -11,8 +11,8 @@ session_start();
 if (!isset($_SESSION['username'])){
 	header("location: index.php");
 } 
-$codflujo='P9';
-$codproceso='F1';
+$codflujo='F1';
+$codproceso='P9';
 $pantalla= 'notificacion.inc.php';
 ?>
 <div>

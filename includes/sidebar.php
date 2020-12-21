@@ -22,6 +22,15 @@
         </div>
         <?php
         }
+        if($_SESSION['codRol']=='B'){
+            ?>
+            <div id="menu">
+                <ul>
+                    <li><a href="bentrada.php?codUsuario=<?php echo $_SESSION['codUsuario'];?>"><span class="material-icons">mail_outline</span>  Bandeja de Entrada</a></li>
+                </ul>
+            </div>
+        <?php
+            }
             if($_SESSION['codRol']=='A'){
         ?>
         <div id="menu">

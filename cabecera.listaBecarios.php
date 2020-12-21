@@ -1,1 +1,1 @@
-<h1>CABECERA lista BECARIOS</h1>
+<h1>Beneficiarios</h1>

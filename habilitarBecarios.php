@@ -13,7 +13,7 @@
 ?>
     <div>
 <?php 
-$sqlf ="select * from postulacion.usuario u, postulacion.postulantebecario p where p.codUsuario= u.codUsuario and p.promedio>60 and p.papelesAlDia='si'";
+$sqlf ="select * from postulacion.usuario u, postulacion.postulantebecario p where p.codUsuario= u.codUsuario";
 $resultadof = mysqli_query($conn, $sqlf);
 ?>
 
@@ -23,6 +23,9 @@ $resultadof = mysqli_query($conn, $sqlf);
             <thead>
                 <td>NOMBRE</td>
                 <td>APELLIDO</td>
+                <td>PROMEDIO</td>
+                <td>PAPELES AL DIA</td>
+                <td>Seleccionar</td>
             </thead>
         <?php
         while($filaf = mysqli_fetch_row($resultadof))
@@ -30,12 +33,20 @@ $resultadof = mysqli_query($conn, $sqlf);
             echo "<tr>";
             echo "<td>".$filaf[3]."</td>";
             echo "<td>".$filaf[4]."</td>";
+            echo "<td>".$filaf[10]."</td>";
+            echo "<td>".$filaf[9]."</td>";
         ?>
+            <td>
+                <input type="checkbox">
+            </td>
         </tr>
         <?php
         };
         ?>
         </tr>
         </table>
-        
+        <select name="sino">
+	        <option>Si</option>
+	        <option>No</option>
+        </select>
     </div>

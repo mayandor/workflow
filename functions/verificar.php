@@ -12,7 +12,11 @@ if($filaf = mysqli_fetch_row($resultadof)){
         if($_SESSION['codRol']== 'A'){
             header("location: ../dashboard_Admin.php");            
         }else{
+            if($_SESSION['codRol']== 'P'){
             header("location: ../dashboard.php");            
+            }else{
+                header("location: ../dashboardBecario.php");            
+            }
         }
 }else{
     header("location: ../login.php?mesagge='NO'");    

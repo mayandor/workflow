@@ -74,7 +74,9 @@ if($fila1 = mysqli_fetch_row($resultado1)){
         if($cf=='F1'){
             header("Location: notificacion.inc.php");
         }else{
-            
+            if($cf='F2'){
+                header("Location: finProceso.php");
+            }
         }
     }
 }

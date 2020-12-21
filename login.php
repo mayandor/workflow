@@ -29,7 +29,8 @@
                     <select name="rol">
                     <option value="">Elige una opción</option>
                     <option value="A">Administrador</option>
-                    <option value="P">Postulante</option>
+                    <option value="P">Postulante auxiliar</option>
+                    <option value="B">Postulante becario</option>
                     </select>
                     <button type="submit">Ingresar</button>
                 </div>
@@ -52,7 +53,8 @@
                     <select name="rol">
                     <option value="">Elige una opción</option>
                     <option value="A">Administrador</option>
-                    <option value="P">Postulante</option>
+                    <option value="P">Postulante auxiliar</option>
+                    <option value="B">Postulante becario</option>
                     </select>
                     <button type="submit">Ingresar</button>
                 </div>

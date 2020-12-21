@@ -1,1 +1,0 @@
-<h1>REGISTRO BECARIOS</h1>

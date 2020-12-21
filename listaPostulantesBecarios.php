@@ -13,16 +13,19 @@
 ?>
     <div>
 <?php 
-$sqlf ="select * from postulacion.usuario u, postulacion.postulantebecario p where p.codUsuario= u.codUsuario and p.promedio>60 and p.papelesAlDia='si'";
+$sqlf ="select * from postulacion.usuario u, postulacion.postulantebecario p where p.codUsuario= u.codUsuario";
 $resultadof = mysqli_query($conn, $sqlf);
 ?>
-
     <!-- <div class="main"> -->
         <!-- Aqui va el contenido -->
         <table>
             <thead>
                 <td>NOMBRE</td>
                 <td>APELLIDO</td>
+                <td>RU</td>
+                <td>PROMEDIO</td>
+                <td>PAPELES AL DIA</td>
+                <td>Operaciones</td>
             </thead>
         <?php
         while($filaf = mysqli_fetch_row($resultadof))
@@ -30,7 +33,13 @@ $resultadof = mysqli_query($conn, $sqlf);
             echo "<tr>";
             echo "<td>".$filaf[3]."</td>";
             echo "<td>".$filaf[4]."</td>";
+            echo "<td>".$filaf[8]."</td>";
+            echo "<td>".$filaf[10]."</td>";
+            echo "<td>".$filaf[9]."</td>";
         ?>
+            <td>
+                <a href="editarPostulante.php?codUsuario=<?php echo $filaf[0];?>&cf=<?php echo $_GET["cf"];?>&cp=<?php echo $_GET["cp"];?>" class="botonmat">Editar</a>
+            </td>
         </tr>
         <?php
         };
